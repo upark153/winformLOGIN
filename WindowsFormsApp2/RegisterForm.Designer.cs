@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginLabel = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.userPhoneField = new System.Windows.Forms.TextBox();
+            this.userNameField = new System.Windows.Forms.TextBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.PasswordText = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.IdText = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExitLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.userNameField = new System.Windows.Forms.TextBox();
-            this.userPhoneField = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LoginLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,63 @@
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // LoginLabel
+            // 
+            this.LoginLabel.AutoSize = true;
+            this.LoginLabel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.LoginLabel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LoginLabel.Location = new System.Drawing.Point(320, 393);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.Size = new System.Drawing.Size(195, 32);
+            this.LoginLabel.TabIndex = 10;
+            this.LoginLabel.Text = "Go To Login?";
+            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WindowsFormsApp2.Properties.Resources.phone;
+            this.pictureBox4.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
+            this.pictureBox4.Location = new System.Drawing.Point(435, 248);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(88, 64);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp2.Properties.Resources.name1;
+            this.pictureBox3.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 248);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(88, 64);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // userPhoneField
+            // 
+            this.userPhoneField.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userPhoneField.Location = new System.Drawing.Point(539, 248);
+            this.userPhoneField.Multiline = true;
+            this.userPhoneField.Name = "userPhoneField";
+            this.userPhoneField.Size = new System.Drawing.Size(238, 64);
+            this.userPhoneField.TabIndex = 7;
+            this.userPhoneField.Enter += new System.EventHandler(this.userPhoneField_Enter);
+            this.userPhoneField.Leave += new System.EventHandler(this.userPhoneField_Leave);
+            // 
+            // userNameField
+            // 
+            this.userNameField.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNameField.Location = new System.Drawing.Point(102, 248);
+            this.userNameField.Multiline = true;
+            this.userNameField.Name = "userNameField";
+            this.userNameField.Size = new System.Drawing.Size(238, 64);
+            this.userNameField.TabIndex = 6;
+            this.userNameField.Enter += new System.EventHandler(this.userNameField_Enter);
+            this.userNameField.Leave += new System.EventHandler(this.userNameField_Leave);
             // 
             // btnRegister
             // 
@@ -97,6 +154,17 @@
             this.PasswordText.TabIndex = 4;
             this.PasswordText.UseSystemPasswordChar = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources._lock;
+            this.pictureBox2.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
+            this.pictureBox2.Location = new System.Drawing.Point(435, 164);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(88, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
             // IdText
             // 
             this.IdText.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -107,6 +175,17 @@
             this.IdText.TabIndex = 2;
             this.IdText.Enter += new System.EventHandler(this.IdText_Enter);
             this.IdText.Leave += new System.EventHandler(this.IdText_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.Login2;
+            this.pictureBox1.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 154);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -143,85 +222,6 @@
             this.label1.Text = "Register";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // userNameField
-            // 
-            this.userNameField.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameField.Location = new System.Drawing.Point(102, 248);
-            this.userNameField.Multiline = true;
-            this.userNameField.Name = "userNameField";
-            this.userNameField.Size = new System.Drawing.Size(238, 64);
-            this.userNameField.TabIndex = 6;
-            this.userNameField.Enter += new System.EventHandler(this.userNameField_Enter);
-            this.userNameField.Leave += new System.EventHandler(this.userNameField_Leave);
-            // 
-            // userPhoneField
-            // 
-            this.userPhoneField.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userPhoneField.Location = new System.Drawing.Point(539, 248);
-            this.userPhoneField.Multiline = true;
-            this.userPhoneField.Name = "userPhoneField";
-            this.userPhoneField.Size = new System.Drawing.Size(238, 64);
-            this.userPhoneField.TabIndex = 7;
-            this.userPhoneField.Enter += new System.EventHandler(this.userPhoneField_Enter);
-            this.userPhoneField.Leave += new System.EventHandler(this.userPhoneField_Leave);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp2.Properties.Resources.phone;
-            this.pictureBox4.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
-            this.pictureBox4.Location = new System.Drawing.Point(435, 248);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(88, 64);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp2.Properties.Resources.name1;
-            this.pictureBox3.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 248);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(88, 64);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp2.Properties.Resources._lock;
-            this.pictureBox2.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
-            this.pictureBox2.Location = new System.Drawing.Point(435, 164);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp2.Properties.Resources.Login2;
-            this.pictureBox1.InitialImage = global::WindowsFormsApp2.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 154);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 74);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // LoginLabel
-            // 
-            this.LoginLabel.AutoSize = true;
-            this.LoginLabel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.LoginLabel.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LoginLabel.Location = new System.Drawing.Point(320, 393);
-            this.LoginLabel.Name = "LoginLabel";
-            this.LoginLabel.Size = new System.Drawing.Size(194, 32);
-            this.LoginLabel.TabIndex = 10;
-            this.LoginLabel.Text = "Go To Login?";
-            this.LoginLabel.Click += new System.EventHandler(this.LoginLabel_Click);
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -234,12 +234,12 @@
             this.Text = "RegisterForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

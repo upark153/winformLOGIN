@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace WindowsFormsApp2
 {
@@ -16,7 +17,8 @@ namespace WindowsFormsApp2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new parking());
+            //Application.Run(new MainForm());
             //Application.Run(new Loginform());
             //Application.Run(new RegisterForm());
         }
