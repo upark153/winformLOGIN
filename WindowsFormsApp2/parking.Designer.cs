@@ -31,121 +31,216 @@ namespace WindowsFormsApp2
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnBlur = new System.Windows.Forms.Button();
+            this.numberRecognizebtn = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.picresult = new System.Windows.Forms.PictureBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.carnumbertext = new System.Windows.Forms.TextBox();
+            this.parkingstatusbtn = new System.Windows.Forms.Button();
+            this.parkingstatus = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBoxserverreply = new System.Windows.Forms.RichTextBox();
             this.exitbtn = new System.Windows.Forms.Button();
             this.connlabel = new System.Windows.Forms.Label();
             this.entrancebtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.carExitbtn = new System.Windows.Forms.Button();
             this.btnServerConnect = new System.Windows.Forms.Button();
-            this.btnrecognize = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.pictureBoxcarnumber = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pictureBoxcapture = new System.Windows.Forms.PictureBox();
+            this.btncapture = new System.Windows.Forms.Button();
+            this.btncctv = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBoxcam = new System.Windows.Forms.PictureBox();
-            this.btncapture = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.carnumberpb = new System.Windows.Forms.PictureBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.carimagepb = new System.Windows.Forms.PictureBox();
-            this.btncctv = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExitLabel = new System.Windows.Forms.Label();
             this.datatimelabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.carnumbertext = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnGray = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnBin = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btnEdge = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btnOCR = new System.Windows.Forms.Button();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picresult)).BeginInit();
             this.groupBox8.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcarnumber)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcapture)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcam)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carnumberpb)).BeginInit();
-            this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.carimagepb)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
-            this.panel1.Controls.Add(this.groupBox8);
-            this.panel1.Controls.Add(this.btnrecognize);
             this.panel1.Controls.Add(this.groupBox4);
+            this.panel1.Controls.Add(this.groupBox8);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.btncapture);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.btncctv);
+            this.panel1.Controls.Add(this.groupBox7);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1345, 733);
+            this.panel1.Size = new System.Drawing.Size(1345, 845);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnBlur);
+            this.groupBox5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox5.Location = new System.Drawing.Point(6, 38);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(175, 94);
+            this.groupBox5.TabIndex = 38;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "가우시안";
+            // 
+            // btnBlur
+            // 
+            this.btnBlur.BackColor = System.Drawing.Color.Sienna;
+            this.btnBlur.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBlur.FlatAppearance.BorderSize = 0;
+            this.btnBlur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBlur.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlur.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBlur.Location = new System.Drawing.Point(12, 40);
+            this.btnBlur.Name = "btnBlur";
+            this.btnBlur.Size = new System.Drawing.Size(150, 37);
+            this.btnBlur.TabIndex = 37;
+            this.btnBlur.Text = "1단계";
+            this.btnBlur.UseVisualStyleBackColor = false;
+            this.btnBlur.Click += new System.EventHandler(this.btnBlur_Click);
+            // 
+            // numberRecognizebtn
+            // 
+            this.numberRecognizebtn.BackColor = System.Drawing.Color.Sienna;
+            this.numberRecognizebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.numberRecognizebtn.FlatAppearance.BorderSize = 0;
+            this.numberRecognizebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.numberRecognizebtn.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberRecognizebtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.numberRecognizebtn.Location = new System.Drawing.Point(347, 147);
+            this.numberRecognizebtn.Name = "numberRecognizebtn";
+            this.numberRecognizebtn.Size = new System.Drawing.Size(145, 42);
+            this.numberRecognizebtn.TabIndex = 29;
+            this.numberRecognizebtn.Text = "차량 번호인식";
+            this.numberRecognizebtn.UseVisualStyleBackColor = false;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.picresult);
+            this.groupBox7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox7.Location = new System.Drawing.Point(936, 423);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(405, 400);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "CAR";
+            // 
+            // picresult
+            // 
+            this.picresult.Location = new System.Drawing.Point(6, 38);
+            this.picresult.Name = "picresult";
+            this.picresult.Size = new System.Drawing.Size(391, 341);
+            this.picresult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picresult.TabIndex = 23;
+            this.picresult.TabStop = false;
+            // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.dateTimePicker1);
+            this.groupBox8.Controls.Add(this.numberRecognizebtn);
             this.groupBox8.Controls.Add(this.carnumbertext);
-            this.groupBox8.Controls.Add(this.button2);
-            this.groupBox8.Controls.Add(this.listBox1);
+            this.groupBox8.Controls.Add(this.parkingstatusbtn);
+            this.groupBox8.Controls.Add(this.parkingstatus);
             this.groupBox8.Controls.Add(this.label2);
             this.groupBox8.Controls.Add(this.richTextBoxserverreply);
             this.groupBox8.Controls.Add(this.exitbtn);
             this.groupBox8.Controls.Add(this.connlabel);
             this.groupBox8.Controls.Add(this.entrancebtn);
-            this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.carExitbtn);
             this.groupBox8.Controls.Add(this.btnServerConnect);
             this.groupBox8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox8.Location = new System.Drawing.Point(12, 106);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(509, 587);
+            this.groupBox8.Size = new System.Drawing.Size(509, 727);
             this.groupBox8.TabIndex = 36;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "서버요청";
             // 
-            // button2
+            // dateTimePicker1
             // 
-            this.button2.BackColor = System.Drawing.Color.Sienna;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(18, 348);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 47);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "주차현황요청";
-            this.button2.UseVisualStyleBackColor = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(237, 353);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 35);
+            this.dateTimePicker1.TabIndex = 47;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // listBox1
+            // carnumbertext
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 29;
-            this.listBox1.Location = new System.Drawing.Point(18, 401);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(474, 178);
-            this.listBox1.TabIndex = 44;
+            this.carnumbertext.Location = new System.Drawing.Point(201, 95);
+            this.carnumbertext.Name = "carnumbertext";
+            this.carnumbertext.Size = new System.Drawing.Size(291, 35);
+            this.carnumbertext.TabIndex = 46;
+            // 
+            // parkingstatusbtn
+            // 
+            this.parkingstatusbtn.BackColor = System.Drawing.Color.Sienna;
+            this.parkingstatusbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.parkingstatusbtn.FlatAppearance.BorderSize = 0;
+            this.parkingstatusbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.parkingstatusbtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parkingstatusbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.parkingstatusbtn.Location = new System.Drawing.Point(18, 348);
+            this.parkingstatusbtn.Name = "parkingstatusbtn";
+            this.parkingstatusbtn.Size = new System.Drawing.Size(186, 47);
+            this.parkingstatusbtn.TabIndex = 45;
+            this.parkingstatusbtn.Text = "주차현황요청";
+            this.parkingstatusbtn.UseVisualStyleBackColor = false;
+            this.parkingstatusbtn.Click += new System.EventHandler(this.parkingstatusbtn_Click);
+            // 
+            // parkingstatus
+            // 
+            this.parkingstatus.FormattingEnabled = true;
+            this.parkingstatus.ItemHeight = 29;
+            this.parkingstatus.Location = new System.Drawing.Point(18, 401);
+            this.parkingstatus.Name = "parkingstatus";
+            this.parkingstatus.Size = new System.Drawing.Size(474, 294);
+            this.parkingstatus.TabIndex = 44;
             // 
             // label2
             // 
@@ -211,20 +306,21 @@ namespace WindowsFormsApp2
             this.entrancebtn.UseVisualStyleBackColor = false;
             this.entrancebtn.Click += new System.EventHandler(this.entrancebtn_Click);
             // 
-            // button1
+            // carExitbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Sienna;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(186, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 47);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "출차요청";
-            this.button1.UseVisualStyleBackColor = false;
+            this.carExitbtn.BackColor = System.Drawing.Color.Sienna;
+            this.carExitbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.carExitbtn.FlatAppearance.BorderSize = 0;
+            this.carExitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.carExitbtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carExitbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.carExitbtn.Location = new System.Drawing.Point(186, 142);
+            this.carExitbtn.Name = "carExitbtn";
+            this.carExitbtn.Size = new System.Drawing.Size(150, 47);
+            this.carExitbtn.TabIndex = 35;
+            this.carExitbtn.Text = "출차요청";
+            this.carExitbtn.UseVisualStyleBackColor = false;
+            this.carExitbtn.Click += new System.EventHandler(this.carExitbtn_Click);
             // 
             // btnServerConnect
             // 
@@ -242,48 +338,15 @@ namespace WindowsFormsApp2
             this.btnServerConnect.UseVisualStyleBackColor = false;
             this.btnServerConnect.Click += new System.EventHandler(this.btnServerConnect_Click);
             // 
-            // btnrecognize
-            // 
-            this.btnrecognize.BackColor = System.Drawing.Color.Sienna;
-            this.btnrecognize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnrecognize.FlatAppearance.BorderSize = 0;
-            this.btnrecognize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrecognize.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrecognize.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnrecognize.Location = new System.Drawing.Point(1116, 649);
-            this.btnrecognize.Name = "btnrecognize";
-            this.btnrecognize.Size = new System.Drawing.Size(168, 44);
-            this.btnrecognize.TabIndex = 29;
-            this.btnrecognize.Text = "차량 번호인식";
-            this.btnrecognize.UseVisualStyleBackColor = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.pictureBoxcarnumber);
-            this.groupBox4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(936, 374);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(397, 215);
-            this.groupBox4.TabIndex = 28;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Car Number";
-            // 
-            // pictureBoxcarnumber
-            // 
-            this.pictureBoxcarnumber.Location = new System.Drawing.Point(7, 39);
-            this.pictureBoxcarnumber.Name = "pictureBoxcarnumber";
-            this.pictureBoxcarnumber.Size = new System.Drawing.Size(384, 170);
-            this.pictureBoxcarnumber.TabIndex = 0;
-            this.pictureBoxcarnumber.TabStop = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox3);
+            this.groupBox1.Controls.Add(this.btncapture);
+            this.groupBox1.Controls.Add(this.btncctv);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(527, 106);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(806, 252);
+            this.groupBox1.Size = new System.Drawing.Size(806, 295);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
@@ -292,9 +355,9 @@ namespace WindowsFormsApp2
             this.groupBox3.Controls.Add(this.pictureBoxcapture);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(409, 10);
+            this.groupBox3.Location = new System.Drawing.Point(409, 61);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(391, 236);
+            this.groupBox3.Size = new System.Drawing.Size(391, 228);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CAPTURE";
@@ -303,31 +366,10 @@ namespace WindowsFormsApp2
             // 
             this.pictureBoxcapture.Location = new System.Drawing.Point(6, 35);
             this.pictureBoxcapture.Name = "pictureBoxcapture";
-            this.pictureBoxcapture.Size = new System.Drawing.Size(379, 195);
+            this.pictureBoxcapture.Size = new System.Drawing.Size(379, 181);
             this.pictureBoxcapture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxcapture.TabIndex = 24;
             this.pictureBoxcapture.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.pictureBoxcam);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox2.Location = new System.Drawing.Point(6, 10);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(391, 236);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "CCTV";
-            // 
-            // pictureBoxcam
-            // 
-            this.pictureBoxcam.Location = new System.Drawing.Point(6, 35);
-            this.pictureBoxcam.Name = "pictureBoxcam";
-            this.pictureBoxcam.Size = new System.Drawing.Size(379, 195);
-            this.pictureBoxcam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxcam.TabIndex = 23;
-            this.pictureBoxcam.TabStop = false;
             // 
             // btncapture
             // 
@@ -337,72 +379,13 @@ namespace WindowsFormsApp2
             this.btncapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncapture.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncapture.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncapture.Location = new System.Drawing.Point(1116, 601);
+            this.btncapture.Location = new System.Drawing.Point(518, 17);
             this.btncapture.Name = "btncapture";
-            this.btncapture.Size = new System.Drawing.Size(168, 41);
+            this.btncapture.Size = new System.Drawing.Size(168, 38);
             this.btncapture.TabIndex = 25;
             this.btncapture.Text = "이미지 캡쳐";
             this.btncapture.UseVisualStyleBackColor = false;
             this.btncapture.Click += new System.EventHandler(this.btncapture_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.groupBox5);
-            this.panel3.Location = new System.Drawing.Point(533, 369);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(391, 324);
-            this.panel3.TabIndex = 10;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.groupBox7);
-            this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(10, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(376, 316);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "입/출차";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.carnumberpb);
-            this.groupBox7.Location = new System.Drawing.Point(9, 228);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(361, 75);
-            this.groupBox7.TabIndex = 1;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "번호판";
-            // 
-            // carnumberpb
-            // 
-            this.carnumberpb.Location = new System.Drawing.Point(7, 21);
-            this.carnumberpb.Name = "carnumberpb";
-            this.carnumberpb.Size = new System.Drawing.Size(348, 50);
-            this.carnumberpb.TabIndex = 0;
-            this.carnumberpb.TabStop = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.carimagepb);
-            this.groupBox6.Location = new System.Drawing.Point(9, 21);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(361, 201);
-            this.groupBox6.TabIndex = 0;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "차량이미지";
-            // 
-            // carimagepb
-            // 
-            this.carimagepb.Location = new System.Drawing.Point(6, 23);
-            this.carimagepb.Name = "carimagepb";
-            this.carimagepb.Size = new System.Drawing.Size(349, 164);
-            this.carimagepb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.carimagepb.TabIndex = 7;
-            this.carimagepb.TabStop = false;
             // 
             // btncctv
             // 
@@ -412,13 +395,34 @@ namespace WindowsFormsApp2
             this.btncctv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncctv.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncctv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncctv.Location = new System.Drawing.Point(942, 601);
+            this.btncctv.Location = new System.Drawing.Point(132, 20);
             this.btncctv.Name = "btncctv";
-            this.btncctv.Size = new System.Drawing.Size(150, 39);
+            this.btncctv.Size = new System.Drawing.Size(150, 35);
             this.btncctv.TabIndex = 6;
             this.btncctv.Text = "CCTV";
             this.btncctv.UseVisualStyleBackColor = false;
             this.btncctv.Click += new System.EventHandler(this.btncctv_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.pictureBoxcam);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Location = new System.Drawing.Point(6, 61);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(391, 228);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "CCTV";
+            // 
+            // pictureBoxcam
+            // 
+            this.pictureBoxcam.Location = new System.Drawing.Point(6, 35);
+            this.pictureBoxcam.Name = "pictureBoxcam";
+            this.pictureBoxcam.Size = new System.Drawing.Size(379, 187);
+            this.pictureBoxcam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxcam.TabIndex = 23;
+            this.pictureBoxcam.TabStop = false;
             // 
             // panel2
             // 
@@ -483,41 +487,250 @@ namespace WindowsFormsApp2
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // carnumbertext
+            // groupBox4
             // 
-            this.carnumbertext.Location = new System.Drawing.Point(201, 95);
-            this.carnumbertext.Name = "carnumbertext";
-            this.carnumbertext.Size = new System.Drawing.Size(291, 35);
-            this.carnumbertext.TabIndex = 46;
+            this.groupBox4.Controls.Add(this.groupBox11);
+            this.groupBox4.Controls.Add(this.groupBox12);
+            this.groupBox4.Controls.Add(this.groupBox13);
+            this.groupBox4.Controls.Add(this.groupBox14);
+            this.groupBox4.Controls.Add(this.groupBox10);
+            this.groupBox4.Controls.Add(this.groupBox9);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(533, 408);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(391, 425);
+            this.groupBox4.TabIndex = 45;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "이미지 처리";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnGray);
+            this.groupBox6.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox6.Location = new System.Drawing.Point(210, 38);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(175, 94);
+            this.groupBox6.TabIndex = 39;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "흑백화";
+            // 
+            // btnGray
+            // 
+            this.btnGray.BackColor = System.Drawing.Color.Sienna;
+            this.btnGray.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGray.FlatAppearance.BorderSize = 0;
+            this.btnGray.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGray.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGray.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGray.Location = new System.Drawing.Point(12, 40);
+            this.btnGray.Name = "btnGray";
+            this.btnGray.Size = new System.Drawing.Size(150, 37);
+            this.btnGray.TabIndex = 37;
+            this.btnGray.Text = "2단계";
+            this.btnGray.UseVisualStyleBackColor = false;
+            this.btnGray.Click += new System.EventHandler(this.btnGray_Click);
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.btnBin);
+            this.groupBox9.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox9.Location = new System.Drawing.Point(6, 138);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(175, 94);
+            this.groupBox9.TabIndex = 40;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "이진화";
+            // 
+            // btnBin
+            // 
+            this.btnBin.BackColor = System.Drawing.Color.Sienna;
+            this.btnBin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBin.FlatAppearance.BorderSize = 0;
+            this.btnBin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBin.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBin.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnBin.Location = new System.Drawing.Point(12, 40);
+            this.btnBin.Name = "btnBin";
+            this.btnBin.Size = new System.Drawing.Size(150, 37);
+            this.btnBin.TabIndex = 37;
+            this.btnBin.Text = "3단계";
+            this.btnBin.UseVisualStyleBackColor = false;
+            this.btnBin.Click += new System.EventHandler(this.btnBin_Click);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.btnEdge);
+            this.groupBox10.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox10.Location = new System.Drawing.Point(210, 138);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(175, 94);
+            this.groupBox10.TabIndex = 41;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "경계추출";
+            // 
+            // btnEdge
+            // 
+            this.btnEdge.BackColor = System.Drawing.Color.Sienna;
+            this.btnEdge.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdge.FlatAppearance.BorderSize = 0;
+            this.btnEdge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdge.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdge.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnEdge.Location = new System.Drawing.Point(12, 40);
+            this.btnEdge.Name = "btnEdge";
+            this.btnEdge.Size = new System.Drawing.Size(150, 37);
+            this.btnEdge.TabIndex = 37;
+            this.btnEdge.Text = "4단계";
+            this.btnEdge.UseVisualStyleBackColor = false;
+            this.btnEdge.Click += new System.EventHandler(this.btnEdge_Click);
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.btnOCR);
+            this.groupBox12.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox12.Location = new System.Drawing.Point(6, 338);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(175, 81);
+            this.groupBox12.TabIndex = 44;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "글자인식";
+            // 
+            // btnOCR
+            // 
+            this.btnOCR.BackColor = System.Drawing.Color.Sienna;
+            this.btnOCR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOCR.FlatAppearance.BorderSize = 0;
+            this.btnOCR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOCR.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOCR.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnOCR.Location = new System.Drawing.Point(12, 40);
+            this.btnOCR.Name = "btnOCR";
+            this.btnOCR.Size = new System.Drawing.Size(150, 37);
+            this.btnOCR.TabIndex = 37;
+            this.btnOCR.Text = "7단계";
+            this.btnOCR.UseVisualStyleBackColor = false;
+            this.btnOCR.Click += new System.EventHandler(this.btnOCR_Click);
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.button13);
+            this.groupBox13.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox13.Location = new System.Drawing.Point(210, 238);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(175, 94);
+            this.groupBox13.TabIndex = 43;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "영역찾기";
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Sienna;
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.SystemColors.Control;
+            this.button13.Location = new System.Drawing.Point(12, 40);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(150, 37);
+            this.button13.TabIndex = 37;
+            this.button13.Text = "6단계";
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.button14);
+            this.groupBox14.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox14.Location = new System.Drawing.Point(6, 238);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(175, 94);
+            this.groupBox14.TabIndex = 42;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "윤곽선찾기";
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Sienna;
+            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.Control;
+            this.button14.Location = new System.Drawing.Point(12, 40);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(150, 37);
+            this.button14.TabIndex = 37;
+            this.button14.Text = "5단계";
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btnReset);
+            this.groupBox11.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox11.Location = new System.Drawing.Point(210, 338);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(175, 81);
+            this.groupBox11.TabIndex = 45;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "이미지";
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Sienna;
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnReset.Location = new System.Drawing.Point(12, 40);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(150, 37);
+            this.btnReset.TabIndex = 37;
+            this.btnReset.Text = "초기화";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // parking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 733);
+            this.ClientSize = new System.Drawing.Size(1345, 845);
             this.Controls.Add(this.panel1);
             this.Name = "parking";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.parking_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picresult)).EndInit();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcarnumber)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcapture)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcam)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.carnumberpb)).EndInit();
-            this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.carimagepb)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -525,8 +738,6 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox carimagepb;
         private System.Windows.Forms.Button btncctv;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ExitLabel;
@@ -539,24 +750,38 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnrecognize;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.PictureBox pictureBoxcarnumber;
+        private System.Windows.Forms.Button numberRecognizebtn;
         private System.Windows.Forms.Label datatimelabel;
         private System.Windows.Forms.RichTextBox richTextBoxserverreply;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button carExitbtn;
         private System.Windows.Forms.Button entrancebtn;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.PictureBox carnumberpb;
-        private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label connlabel;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button parkingstatusbtn;
+        private System.Windows.Forms.ListBox parkingstatus;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button exitbtn;
         private System.Windows.Forms.TextBox carnumbertext;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnBlur;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.PictureBox picresult;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.Button btnOCR;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button btnEdge;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button btnBin;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnGray;
     }
 }

@@ -13,6 +13,9 @@ using System.Net.Sockets;
 using System.Threading;
 using System.IO;
 using System.Net;
+using OpenCvSharp;
+using Tesseract;
+using Point = OpenCvSharp.Point;
 
 namespace WindowsFormsApp2
 {
@@ -24,138 +27,36 @@ namespace WindowsFormsApp2
         TcpClient client;
         Thread clientThread;
         Label status; // 상태표시
-        //public const int _buffsize = 1024;
-        //public Socket _wSocket = null;
-        //public byte[] _buffer = new byte[_buffsize];
-        //public StringBuilder sb = new StringBuilder();
-
-        //public class AsyncSocketClient
-        //{
-        //    private const int _port = 9001;
-        //    private static ManualResetEvent connectCompleted = new ManualResetEvent(false);
-        //    private static ManualResetEvent sendCompleted = new ManualResetEvent(false);
-        //    private static ManualResetEvent receiveCompleted = new ManualResetEvent(false);
-        //    private static string response = String.Empty;
-
-        //    public static void StartClinet()
-        //    {
-        //        try
-        //        {
-        //            IPAddress ipaddr = IPAddress.Parse("10.10.21.105");
-        //            IPHostEntry ipHost = Dns.GetHostEntry(ipaddr);
-        //            IPEndPoint remoteEndPoint = new IPEndPoint(ipaddr, _port);
-
-        //            Socket client = new Socket(ipaddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
-        //            client.BeginConnect(remoteEndPoint, new AsyncCallback(ConnectionCallback), client);
-        //            Send(client, "hello jiheock");
-        //            sendCompleted.WaitOne();
-
-        //            Receive(client);
-        //            receiveCompleted.WaitOne();
-        //            Console.WriteLine($"Response received {response}");
-        //            client.Shutdown(SocketShutdown.Both);
-        //            client.Close();
-        //        }
-        //        catch(Exception e)
-        //        {
-
-        //        }
-        //    }
-
-        //    private static void Receive(Socket client)
-        //    {
-        //        try
-        //        {
-        //            parking state = new parking();
-        //            state._wSocket = client;
-        //            client.BeginReceive(state._buffer, 0, parking._buffsize, 0, new AsyncCallback(ReceiveCallback), state);
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e);
-        //        }
-        //    }
-
-        //    private static void ReceiveCallback(IAsyncResult ar)
-        //    {
-        //        try
-        //        {
-        //            parking state = (parking)ar.AsyncState;
-        //            var client = state._wSocket;
-        //            int byteRead = client.EndReceive(ar);
-        //            if (byteRead > 0)
-        //            {
-        //                state.sb.Append(Encoding.ASCII.GetString(state._buffer, 0, byteRead));
-        //                client.BeginReceive(state._buffer, 0, parking._buffsize, 0, new AsyncCallback(ReceiveCallback), state);
-        //            }
-        //            else
-        //            {
-        //                if (state.sb.Length > 1)
-        //                {
-        //                    response = state.sb.ToString();
-        //                }
-        //                receiveCompleted.Set();
-        //            }
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e);
-        //        }
-
-        //    }
-
-        //    private static void Send(Socket client, string data)
-        //    {
-        //        byte[] byteData = Encoding.ASCII.GetBytes(data);
-        //        client.BeginSend(byteData, 0, byteData.Length, 0, new AsyncCallback(SendCallback), client);
-        //    }
-
-        //    private static void SendCallback(IAsyncResult ar)
-        //    {
-        //        try
-        //        {
-        //            Socket client = (Socket)ar.AsyncState;
-        //            int byteSent = client.EndSend(ar);
-        //            Console.WriteLine($"Sent : {byteSent} bytes to server");
-        //            sendCompleted.Set();
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e);
-        //        }
-        //    }
-
-        //    private static void ConnectionCallback(IAsyncResult ar)
-        //    {
-        //        try
-        //        {
-        //            Socket client = (Socket)ar.AsyncState;
-        //            client.EndConnect(ar);
-        //            Console.WriteLine($"Socket connection : {client.RemoteEndPoint.ToString()}");
-        //            connectCompleted.Set();
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine(e);
-        //        }
-        //    }
-        //}
-        //byte[] bytes = new byte[_buffsize];
+        String _date;
+        Bitmap NowImg; // 현재의 이미지
+        Bitmap processedImg; // 처리가 가해진 이미지
 
         public parking()
         {
             InitializeComponent();
-            //AsyncSocketClient.StartClinet();
         }
 
         private void ExitLabel_Click(object sender, EventArgs e)
         {
-            stream.Flush();
-            stream.Close();
-            client.Close();
-            clientThread.Interrupt();
-            Application.ExitThread();
-            Application.Exit();
+            try
+            {
+                if (client.Connected)
+                {   
+                    stream.Close();
+                    client.Close();
+                    clientThread.Interrupt();
+                    Application.ExitThread();
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
+            catch (Exception)
+            {
+                Application.Exit();
+            }
         }
 
         private void parking_Load(object sender, EventArgs e)
@@ -271,7 +172,23 @@ namespace WindowsFormsApp2
 
         private void btncapture_Click(object sender, EventArgs e)
         {
-            pictureBoxcapture.Image = pictureBoxcam.Image;
+            Bitmap Image = new Bitmap(pictureBoxcam.Image);
+            NowImg = Image;
+            //pictureBoxcapture.Image = pictureBoxcam.Image;
+            this.pictureBoxcapture.Image = NowImg;
+        }
+
+        public Bitmap SelectImg()
+        {
+            /* 이미지 선택 메서드, 메모리 누수 방지를 위한 using 사용 */
+            if (processedImg is null)
+            {
+                return NowImg;
+            }
+            else
+            {
+                return processedImg;
+            }
         }
 
         Point lastPoint;
@@ -340,28 +257,75 @@ namespace WindowsFormsApp2
                     byte[] buffer = new byte[bufferSize];
                     int bytes = stream.Read(buffer, 0, buffer.Length);
                     string msg = Encoding.UTF8.GetString(buffer, 0, bytes);
-                    Display(msg);
+                    if(!isClassifyMsg(msg)) 
+                        Display(msg);
                 }
             }
             catch(IOException e)
             {
                 setLabel(status, "연결종료", Color.IndianRed);
                 MessageBox.Show("서버와 연결이 종료되었습니다.", "연결종료");
+                stream.Close();
+                client.Close();
                 clientThread.Interrupt();
             }
         }
         void Classify(string server)
         {
-            if(!client.Connected)
+            try
             {
-                MessageBox.Show("서버에 먼저 연결 해 주세요.");
-            }           
-            
-            else if(server.StartsWith(entrancebtn.Text))
-            {
-                
-                Sender(server);
+                if (!client.Connected)
+                {
+                    MessageBox.Show("서버에 먼저 연결 해 주세요.");
+                }
+                else
+                {
+
+                    if (server.StartsWith(entrancebtn.Text))
+                    {
+                        Sender(server);
+                    }
+
+                    else if (server.StartsWith(carExitbtn.Text))
+                    {
+                        Sender(server);
+                    }
+
+                    else if (server.StartsWith(parkingstatusbtn.Text))
+                    {
+                        Sender(server);
+                    }
+
+                }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("서버와 연결되 있지 않습니다.", "연결종료");
+            }
+        }
+
+        bool isClassifyMsg(string msg)
+        {
+            bool servermsg = true;
+
+            if (msg.StartsWith("입차") || msg.StartsWith("출차"))
+            {
+                servermsg = true;
+            }
+            else if (msg.StartsWith("주차현황"))
+            {
+                parkingstatus.Items.Clear();
+                char split = ' ';
+                string[] parkinglist = msg.Split(split);
+                foreach (string s in parkinglist)
+                {
+                    if (s.StartsWith("주차현황")) continue;
+                    parkingstatus.Items.Add(s);
+                }
+            }
+            else servermsg = false;
+
+            return servermsg;
         }
         private void entrancebtn_Click(object sender, EventArgs e)
         {
@@ -373,13 +337,164 @@ namespace WindowsFormsApp2
 
             if (numberlength >= 7 && numberlength <= 8)
             {
-                string entry = String.Concat(entrance, " ",datetime, " ", carnumber);
-                Classify(entry);
+                string entrycar = String.Concat(entrance, " ",datetime, " ", carnumber);
+                Classify(entrycar);
             }
             else
             {
                 MessageBox.Show("자동차번호를 제대로 입력 해야 합니다.", "전송실패");
             }
+        }
+
+        private void carExitbtn_Click(object sender, EventArgs e)
+        {
+            string exit = carExitbtn.Text;
+            string datetime = datatimelabel.Text;
+            string carnumber = carnumbertext.Text;
+            int numberlength = carnumber.Length;
+
+            if (numberlength >= 7 && numberlength <= 8)
+            {
+                string exitcar = String.Concat(exit, " ", datetime, " ", carnumber);
+                Classify(exitcar);
+            }
+            else
+            {
+                MessageBox.Show("자동차번호를 제대로 입력 해야 합니다.", "전송실패");
+            }
+        }
+
+        private void parkingstatusbtn_Click(object sender, EventArgs e)
+        {
+            string senddate = dateTimePicker1.Text; 
+            string parkingstatus = parkingstatusbtn.Text;
+
+            string parkinginformation = String.Concat(parkingstatus, " ", senddate);
+            Classify(parkinginformation);
+           
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime mydatetime = dateTimePicker1.Value;
+            _date = mydatetime.ToString("yyyy/MM/dd");
+            MessageBox.Show(_date, "선택 날짜");
+            //DateTime dt = dateTimePicker1.Value;
+            //string daterequest = string.Format("{0}년{1}월{2}일", dt.Year, dt.Month, dt.Day);
+            //MessageBox.Show(daterequest, "선택 날짜");
+            //string datereturn = daterequest;
+            //return datereturn; 
+        }
+
+        private void btnBlur_Click(object sender, EventArgs e)
+        {
+            OpenCvSharp.Mat img = OpenCvSharp.Extensions.BitmapConverter.ToMat(SelectImg());
+            OpenCvSharp.Mat result = new OpenCvSharp.Mat(); // 편집 후 이미지
+
+            /* 가우시안 */
+            Cv2.GaussianBlur(img, result, new OpenCvSharp.Size(3, 3), 0);
+            // 편집 후 이미지 할당
+            processedImg = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(result);
+            this.picresult.Image = processedImg;
+
+            // 메모리 해제
+            img.Dispose();
+            result.Dispose();
+
+        }
+
+        private void btnGray_Click(object sender, EventArgs e)
+        {
+            OpenCvSharp.Mat img = OpenCvSharp.Extensions.BitmapConverter.ToMat(SelectImg()); // 편집할 이미지
+            OpenCvSharp.Mat result = new OpenCvSharp.Mat(); // 편집 후 이미지
+
+            /* 그레이 스케일 : 이미 그레이스케일을 적용한 이미지에는 그레이스케일 불가 */
+
+            if(img.Channels() != 1)
+            {
+                Cv2.CvtColor(img, result, ColorConversionCodes.BGR2GRAY);
+
+                // 편집 후 이미지 할당
+                processedImg = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(result);
+                this.picresult.Image = processedImg;
+
+                // 메모리 해제
+                img.Dispose();
+                result.Dispose();
+
+            }
+
+        }
+
+        private void btnBin_Click(object sender, EventArgs e)
+        {
+            OpenCvSharp.Mat img = OpenCvSharp.Extensions.BitmapConverter.ToMat(SelectImg()); // 편집할 이미지
+            OpenCvSharp.Mat result = new OpenCvSharp.Mat(); // 편집 후 이미지
+
+            /* 이진화 : 그레이스케일이 적용되지 않은 이미지는 이진화 하지 않음 */
+
+            if (img.Channels() == 1)
+            {
+                Cv2.AdaptiveThreshold(img, result, 255, AdaptiveThresholdTypes.GaussianC, ThresholdTypes.Binary, 15, 9);
+
+                // 편집 후 이미지 할당
+                processedImg = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(result);
+                this.picresult.Image = processedImg;
+
+                // 메모리 해제
+                img.Dispose();
+                result.Dispose();
+
+            }
+        }
+
+        private void btnEdge_Click(object sender, EventArgs e)
+        {
+            OpenCvSharp.Mat img = OpenCvSharp.Extensions.BitmapConverter.ToMat(SelectImg()); // 편집할 이미지
+            OpenCvSharp.Mat result = new OpenCvSharp.Mat();
+
+            /* 경계 추출 */
+            Cv2.Canny(img, result, 100, 200, 3);
+            // 편집 후 이미지 할당
+            processedImg = OpenCvSharp.Extensions.BitmapConverter.ToBitmap(result);
+            this.picresult.Image = processedImg;
+
+            // 메모리 해제
+            img.Dispose();
+            result.Dispose();
+        }
+
+        private void btnOCR_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("인식 버튼 클릭");
+            /* 글자 인식 */
+            try
+            {
+                // 경로 (폴더 내 tessdata폴더), traineddata 파일명, 모드
+                using (var engine = new TesseractEngine(@"./tessdata", "kor", EngineMode.Default))
+                using (Pix pix = PixConverter.ToPix(SelectImg()))
+                using (var page = engine.Process(pix))
+                {
+                    this.carnumbertext.Text = page.GetText();
+                    Console.WriteLine(page.GetText());
+                }
+            }
+            catch (Exception ex)
+            {
+                /* 243 자주 보이는 오류 */
+                // Failed to initialise tesseract engine
+                //  See https://github.com/charlesw/tesseract/wiki/Error-1 for details.
+                this.carnumbertext.Text = ex.ToString();
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            /* 초기화 */
+            processedImg = null;
+            this.picresult.Image = null;
+            this.carnumbertext.Text = null;
         }
     }
 }
