@@ -31,16 +31,16 @@ namespace WindowsFormsApp2
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBoxserverreply = new System.Windows.Forms.RichTextBox();
+            this.exitbtn = new System.Windows.Forms.Button();
+            this.connlabel = new System.Windows.Forms.Label();
             this.entrancebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.richTextBoxserverreply = new System.Windows.Forms.RichTextBox();
+            this.btnServerConnect = new System.Windows.Forms.Button();
             this.btnrecognize = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.pictureBoxcarnumber = new System.Windows.Forms.PictureBox();
@@ -49,17 +49,13 @@ namespace WindowsFormsApp2
             this.pictureBoxcapture = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBoxcam = new System.Windows.Forms.PictureBox();
-            this.btnServerConnect = new System.Windows.Forms.Button();
             this.btncapture = new System.Windows.Forms.Button();
-            this.cbarea = new System.Windows.Forms.ComboBox();
-            this.label65 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.carnumberpb = new System.Windows.Forms.PictureBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.carimagepb = new System.Windows.Forms.PictureBox();
-            this.RegisterLabel = new System.Windows.Forms.Label();
             this.btncctv = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ExitLabel = new System.Windows.Forms.Label();
@@ -67,7 +63,7 @@ namespace WindowsFormsApp2
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.connlabel = new System.Windows.Forms.Label();
+            this.carnumbertext = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -90,85 +86,42 @@ namespace WindowsFormsApp2
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Chocolate;
-            this.panel1.Controls.Add(this.connlabel);
-            this.panel1.Controls.Add(this.listView2);
-            this.panel1.Controls.Add(this.listView1);
-            this.panel1.Controls.Add(this.monthCalendar1);
             this.panel1.Controls.Add(this.groupBox8);
-            this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.richTextBoxserverreply);
             this.panel1.Controls.Add(this.btnrecognize);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.btnServerConnect);
             this.panel1.Controls.Add(this.btncapture);
-            this.panel1.Controls.Add(this.cbarea);
-            this.panel1.Controls.Add(this.label65);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.RegisterLabel);
             this.panel1.Controls.Add(this.btncctv);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1345, 1046);
+            this.panel1.Size = new System.Drawing.Size(1345, 733);
             this.panel1.TabIndex = 2;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
-            // listView2
-            // 
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(554, 766);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(767, 268);
-            this.listView2.TabIndex = 39;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(33, 766);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(488, 268);
-            this.listView1.TabIndex = 38;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(33, 534);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 37;
-            // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button3);
+            this.groupBox8.Controls.Add(this.carnumbertext);
             this.groupBox8.Controls.Add(this.button2);
+            this.groupBox8.Controls.Add(this.listBox1);
+            this.groupBox8.Controls.Add(this.label2);
+            this.groupBox8.Controls.Add(this.richTextBoxserverreply);
+            this.groupBox8.Controls.Add(this.exitbtn);
+            this.groupBox8.Controls.Add(this.connlabel);
             this.groupBox8.Controls.Add(this.entrancebtn);
             this.groupBox8.Controls.Add(this.button1);
+            this.groupBox8.Controls.Add(this.btnServerConnect);
             this.groupBox8.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox8.Location = new System.Drawing.Point(33, 369);
+            this.groupBox8.Location = new System.Drawing.Point(12, 106);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(330, 153);
+            this.groupBox8.Size = new System.Drawing.Size(509, 587);
             this.groupBox8.TabIndex = 36;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "서버요청";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Sienna;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(174, 91);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 43);
-            this.button3.TabIndex = 37;
-            this.button3.Text = "출차승인";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -176,14 +129,71 @@ namespace WindowsFormsApp2
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(174, 28);
+            this.button2.Location = new System.Drawing.Point(18, 348);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 47);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "입차승인";
+            this.button2.Size = new System.Drawing.Size(186, 47);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "주차현황요청";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 29;
+            this.listBox1.Location = new System.Drawing.Point(18, 401);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(474, 178);
+            this.listBox1.TabIndex = 44;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Sienna;
+            this.label2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(17, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 37);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "자동차 번호 :";
+            // 
+            // richTextBoxserverreply
+            // 
+            this.richTextBoxserverreply.Location = new System.Drawing.Point(18, 195);
+            this.richTextBoxserverreply.Name = "richTextBoxserverreply";
+            this.richTextBoxserverreply.Size = new System.Drawing.Size(474, 140);
+            this.richTextBoxserverreply.TabIndex = 31;
+            this.richTextBoxserverreply.Text = "";
+            // 
+            // exitbtn
+            // 
+            this.exitbtn.BackColor = System.Drawing.Color.Sienna;
+            this.exitbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitbtn.FlatAppearance.BorderSize = 0;
+            this.exitbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitbtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitbtn.ForeColor = System.Drawing.SystemColors.Control;
+            this.exitbtn.Location = new System.Drawing.Point(342, 34);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.Size = new System.Drawing.Size(150, 42);
+            this.exitbtn.TabIndex = 41;
+            this.exitbtn.Text = "연결종료";
+            this.exitbtn.UseVisualStyleBackColor = false;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            // 
+            // connlabel
+            // 
+            this.connlabel.AutoSize = true;
+            this.connlabel.BackColor = System.Drawing.Color.AliceBlue;
+            this.connlabel.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connlabel.Location = new System.Drawing.Point(194, 36);
+            this.connlabel.Name = "connlabel";
+            this.connlabel.Size = new System.Drawing.Size(113, 37);
+            this.connlabel.TabIndex = 40;
+            this.connlabel.Text = "연결상태";
+            this.connlabel.Click += new System.EventHandler(this.connlabel_Click);
             // 
             // entrancebtn
             // 
@@ -191,14 +201,15 @@ namespace WindowsFormsApp2
             this.entrancebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.entrancebtn.FlatAppearance.BorderSize = 0;
             this.entrancebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.entrancebtn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entrancebtn.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entrancebtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.entrancebtn.Location = new System.Drawing.Point(9, 28);
+            this.entrancebtn.Location = new System.Drawing.Point(18, 142);
             this.entrancebtn.Name = "entrancebtn";
             this.entrancebtn.Size = new System.Drawing.Size(150, 47);
             this.entrancebtn.TabIndex = 34;
             this.entrancebtn.Text = "입차요청";
             this.entrancebtn.UseVisualStyleBackColor = false;
+            this.entrancebtn.Click += new System.EventHandler(this.entrancebtn_Click);
             // 
             // button1
             // 
@@ -206,33 +217,30 @@ namespace WindowsFormsApp2
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(9, 91);
+            this.button1.Location = new System.Drawing.Point(186, 142);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 43);
+            this.button1.Size = new System.Drawing.Size(150, 47);
             this.button1.TabIndex = 35;
             this.button1.Text = "출차요청";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label30
+            // btnServerConnect
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.AliceBlue;
-            this.label30.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(36, 715);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(111, 34);
-            this.label30.TabIndex = 32;
-            this.label30.Text = "입차현황";
-            // 
-            // richTextBoxserverreply
-            // 
-            this.richTextBoxserverreply.Location = new System.Drawing.Point(33, 218);
-            this.richTextBoxserverreply.Name = "richTextBoxserverreply";
-            this.richTextBoxserverreply.Size = new System.Drawing.Size(330, 140);
-            this.richTextBoxserverreply.TabIndex = 31;
-            this.richTextBoxserverreply.Text = "";
+            this.btnServerConnect.BackColor = System.Drawing.Color.Sienna;
+            this.btnServerConnect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServerConnect.FlatAppearance.BorderSize = 0;
+            this.btnServerConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServerConnect.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServerConnect.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnServerConnect.Location = new System.Drawing.Point(18, 34);
+            this.btnServerConnect.Name = "btnServerConnect";
+            this.btnServerConnect.Size = new System.Drawing.Size(143, 42);
+            this.btnServerConnect.TabIndex = 26;
+            this.btnServerConnect.Text = "서버 연결";
+            this.btnServerConnect.UseVisualStyleBackColor = false;
+            this.btnServerConnect.Click += new System.EventHandler(this.btnServerConnect_Click);
             // 
             // btnrecognize
             // 
@@ -240,11 +248,11 @@ namespace WindowsFormsApp2
             this.btnrecognize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnrecognize.FlatAppearance.BorderSize = 0;
             this.btnrecognize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrecognize.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrecognize.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrecognize.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnrecognize.Location = new System.Drawing.Point(371, 234);
+            this.btnrecognize.Location = new System.Drawing.Point(1116, 649);
             this.btnrecognize.Name = "btnrecognize";
-            this.btnrecognize.Size = new System.Drawing.Size(150, 44);
+            this.btnrecognize.Size = new System.Drawing.Size(168, 44);
             this.btnrecognize.TabIndex = 29;
             this.btnrecognize.Text = "차량 번호인식";
             this.btnrecognize.UseVisualStyleBackColor = false;
@@ -254,7 +262,7 @@ namespace WindowsFormsApp2
             this.groupBox4.Controls.Add(this.pictureBoxcarnumber);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(936, 370);
+            this.groupBox4.Location = new System.Drawing.Point(936, 374);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(397, 215);
             this.groupBox4.TabIndex = 28;
@@ -321,67 +329,28 @@ namespace WindowsFormsApp2
             this.pictureBoxcam.TabIndex = 23;
             this.pictureBoxcam.TabStop = false;
             // 
-            // btnServerConnect
-            // 
-            this.btnServerConnect.BackColor = System.Drawing.Color.Sienna;
-            this.btnServerConnect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnServerConnect.FlatAppearance.BorderSize = 0;
-            this.btnServerConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServerConnect.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServerConnect.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnServerConnect.Location = new System.Drawing.Point(33, 162);
-            this.btnServerConnect.Name = "btnServerConnect";
-            this.btnServerConnect.Size = new System.Drawing.Size(143, 50);
-            this.btnServerConnect.TabIndex = 26;
-            this.btnServerConnect.Text = "서버연결";
-            this.btnServerConnect.UseVisualStyleBackColor = false;
-            this.btnServerConnect.Click += new System.EventHandler(this.btnServerConnect_Click);
-            // 
             // btncapture
             // 
             this.btncapture.BackColor = System.Drawing.Color.Sienna;
             this.btncapture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncapture.FlatAppearance.BorderSize = 0;
             this.btncapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncapture.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncapture.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncapture.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncapture.Location = new System.Drawing.Point(371, 177);
+            this.btncapture.Location = new System.Drawing.Point(1116, 601);
             this.btncapture.Name = "btncapture";
-            this.btncapture.Size = new System.Drawing.Size(150, 41);
+            this.btncapture.Size = new System.Drawing.Size(168, 41);
             this.btncapture.TabIndex = 25;
             this.btncapture.Text = "이미지 캡쳐";
             this.btncapture.UseVisualStyleBackColor = false;
             this.btncapture.Click += new System.EventHandler(this.btncapture_Click);
-            // 
-            // cbarea
-            // 
-            this.cbarea.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbarea.FormattingEnabled = true;
-            this.cbarea.Items.AddRange(new object[] {
-            "입차",
-            "출차"});
-            this.cbarea.Location = new System.Drawing.Point(194, 115);
-            this.cbarea.Name = "cbarea";
-            this.cbarea.Size = new System.Drawing.Size(145, 37);
-            this.cbarea.TabIndex = 22;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.BackColor = System.Drawing.Color.AliceBlue;
-            this.label65.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(558, 715);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(111, 34);
-            this.label65.TabIndex = 2;
-            this.label65.Text = "출차현황";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.AliceBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.groupBox5);
-            this.panel3.Location = new System.Drawing.Point(527, 369);
+            this.panel3.Location = new System.Drawing.Point(533, 369);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(391, 324);
             this.panel3.TabIndex = 10;
@@ -391,7 +360,7 @@ namespace WindowsFormsApp2
             this.groupBox5.Controls.Add(this.groupBox7);
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(10, 7);
+            this.groupBox5.Location = new System.Drawing.Point(10, 3);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(376, 316);
             this.groupBox5.TabIndex = 0;
@@ -435,27 +404,15 @@ namespace WindowsFormsApp2
             this.carimagepb.TabIndex = 7;
             this.carimagepb.TabStop = false;
             // 
-            // RegisterLabel
-            // 
-            this.RegisterLabel.AutoSize = true;
-            this.RegisterLabel.BackColor = System.Drawing.Color.Sienna;
-            this.RegisterLabel.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.RegisterLabel.Location = new System.Drawing.Point(35, 115);
-            this.RegisterLabel.Name = "RegisterLabel";
-            this.RegisterLabel.Size = new System.Drawing.Size(141, 37);
-            this.RegisterLabel.TabIndex = 9;
-            this.RegisterLabel.Text = "주차 구분 :";
-            // 
             // btncctv
             // 
             this.btncctv.BackColor = System.Drawing.Color.Sienna;
             this.btncctv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncctv.FlatAppearance.BorderSize = 0;
             this.btncctv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncctv.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncctv.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncctv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btncctv.Location = new System.Drawing.Point(371, 117);
+            this.btncctv.Location = new System.Drawing.Point(942, 601);
             this.btncctv.Name = "btncctv";
             this.btncctv.Size = new System.Drawing.Size(150, 39);
             this.btncctv.TabIndex = 6;
@@ -494,7 +451,7 @@ namespace WindowsFormsApp2
             this.datatimelabel.AutoSize = true;
             this.datatimelabel.BackColor = System.Drawing.Color.AliceBlue;
             this.datatimelabel.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datatimelabel.Location = new System.Drawing.Point(755, 58);
+            this.datatimelabel.Location = new System.Drawing.Point(521, 58);
             this.datatimelabel.Name = "datatimelabel";
             this.datatimelabel.Size = new System.Drawing.Size(119, 34);
             this.datatimelabel.TabIndex = 33;
@@ -517,39 +474,34 @@ namespace WindowsFormsApp2
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(97, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(666, 65);
+            this.label1.Size = new System.Drawing.Size(424, 65);
             this.label1.TabIndex = 0;
-            this.label1.Text = "광주인력개발원 주차관리 시스템";
+            this.label1.Text = "주차관리 시스템";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // connlabel
+            // carnumbertext
             // 
-            this.connlabel.AutoSize = true;
-            this.connlabel.BackColor = System.Drawing.Color.AliceBlue;
-            this.connlabel.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connlabel.Location = new System.Drawing.Point(194, 174);
-            this.connlabel.Name = "connlabel";
-            this.connlabel.Size = new System.Drawing.Size(111, 34);
-            this.connlabel.TabIndex = 40;
-            this.connlabel.Text = "연결상태";
+            this.carnumbertext.Location = new System.Drawing.Point(201, 95);
+            this.carnumbertext.Name = "carnumbertext";
+            this.carnumbertext.Size = new System.Drawing.Size(291, 35);
+            this.carnumbertext.TabIndex = 46;
             // 
             // parking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1345, 1046);
+            this.ClientSize = new System.Drawing.Size(1345, 733);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "parking";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.parking_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxcarnumber)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -573,11 +525,8 @@ namespace WindowsFormsApp2
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cbarea;
-        private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox carimagepb;
-        private System.Windows.Forms.Label RegisterLabel;
         private System.Windows.Forms.Button btncctv;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label ExitLabel;
@@ -594,7 +543,6 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.PictureBox pictureBoxcarnumber;
         private System.Windows.Forms.Label datatimelabel;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.RichTextBox richTextBoxserverreply;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
@@ -604,11 +552,11 @@ namespace WindowsFormsApp2
         private System.Windows.Forms.PictureBox carnumberpb;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label connlabel;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button exitbtn;
+        private System.Windows.Forms.TextBox carnumbertext;
     }
 }
