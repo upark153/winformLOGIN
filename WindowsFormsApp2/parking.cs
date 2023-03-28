@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
     public partial class parking : Form
     {
         bool _streaming;
-        Capture _capture;
+        Emgu.CV.VideoCapture _capture;
         NetworkStream stream = default(NetworkStream);
         TcpClient client;
         Thread clientThread;
@@ -62,13 +62,13 @@ namespace WindowsFormsApp2
         private void parking_Load(object sender, EventArgs e)
         {
             _streaming = false;
-            _capture = new Capture();
+            _capture = new Emgu.CV.VideoCapture();
             timer1.Interval = 100; // 타이머 간격
             timer1.Start();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            datatimelabel.Text = DateTime.Now.ToString("F"); // F는 자세한 날짜 및 시간
+            datatimelabel.Text = DateTime.Now.ToString("G"); // F는 자세한 날짜 및 시간
             //Console.WriteLine(datatimelabel.Text);
             //Display(datatimelabel.Text);
         }
@@ -145,6 +145,9 @@ namespace WindowsFormsApp2
         private void streaming(object sender, System.EventArgs e)
         {
             var img = _capture.QueryFrame().ToImage<Bgr, byte>();
+            //_capture = new Emgu.CV.VideoCapture();
+            //Emgu.CV.Mat m = new Emgu.CV.Mat();
+            //_capture.Read(m);
             var bmp = img.Bitmap;
             pictureBoxcam.Image = bmp;
         }
@@ -154,6 +157,7 @@ namespace WindowsFormsApp2
             if (!_streaming)
             {
                 Application.Idle += streaming;
+
                 btncctv.Text = @"Stop CCTV";
                 btncctv.ForeColor = Color.White;
                 btncctv.BackColor = Color.Red;
@@ -410,7 +414,7 @@ namespace WindowsFormsApp2
 
             /* 그레이 스케일 : 이미 그레이스케일을 적용한 이미지에는 그레이스케일 불가 */
 
-            if(img.Channels() != 1)
+            if (img.Channels() != 1)
             {
                 Cv2.CvtColor(img, result, ColorConversionCodes.BGR2GRAY);
 
@@ -496,5 +500,6 @@ namespace WindowsFormsApp2
             this.picresult.Image = null;
             this.carnumbertext.Text = null;
         }
+
     }
 }
